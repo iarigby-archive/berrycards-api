@@ -13,5 +13,6 @@ libraryDependencies ++= {
     "org.scalatest" %% "scalatest" % scalaTestVersion % Test,
     "com.typesafe.akka" %% "akka-testkit" % "2.5.12" % Test,
     "com.typesafe.akka" %% "akka-http-testkit" % akkaHttpVersion
-  )
+  ).map(_.exclude("org.slf4j", "*")) ++ Seq("ch.qos.logback" % "logback-classic" % "1.2.3")
+  // exclude loggers from the dependencies so jvm will use the one we want
 }
