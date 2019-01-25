@@ -4,6 +4,8 @@ version := "0.1"
 
 scalaVersion := "2.12.8"
 
+enablePlugins(JavaServerAppPackaging)
+
 libraryDependencies ++= {
   val akkaHttpVersion = "10.1.3"
   val scalaTestVersion = "3.0.4"
