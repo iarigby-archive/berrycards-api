@@ -22,7 +22,7 @@ object BerryCards extends App with CorsSupport {
 
   val berryCardsApi = new BerryCardsApi
   val adminApiBindingFuture: Future[ServerBinding] = Http()
-    .bindAndHandle(RouteResult.route2HandlerFlow(corsHandler(berryCardsApi.routes)), config.serverHost, config.serverPort)
+  .bindAndHandle(RouteResult.route2HandlerFlow(corsHandler(berryCardsApi.routes)), config.serverHost, config.serverPort)
     .map(binding => {
       logger.info(s"Server started on ${config.serverHost}:${config.serverPort}")
       binding

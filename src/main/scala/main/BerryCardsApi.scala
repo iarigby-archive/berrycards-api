@@ -49,4 +49,7 @@ trait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {
   implicit val typeFormat: RootJsonFormat[Type] = jsonFormat1(Type)
   implicit val cardFormat: RootJsonFormat[Card] = jsonFormat4(Card)
   implicit val deckFormat: RootJsonFormat[Deck] = jsonFormat2(Deck)
+      }
+    }
+  }
 }

@@ -4,8 +4,7 @@ import com.typesafe.config.ConfigFactory
 
 /** Responsible for lazy loading values from application.conf
   *
-  */
-trait Config {
+  */trait Config {
 
   private lazy val config = ConfigFactory.load()
 
