@@ -4,6 +4,6 @@ package main
   * @example you want to study definitions before moving on to theorems
   * @param name name
   */
-class Type(name: String) {
+case class Type(name: String = "none") {
 
 }
