@@ -2,7 +2,9 @@ package main
 
 import com.typesafe.config.ConfigFactory
 
-trait Config {
+/** Responsible for lazy loading values from application.conf
+  *
+  */trait Config {
 
   private lazy val config = ConfigFactory.load()
 
